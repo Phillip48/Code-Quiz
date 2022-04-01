@@ -19,6 +19,17 @@ a {
     color: crimson;
 }
 
+aside {
+    text-align: right;
+    display: inline-block;
+    padding: 2rem;
+}
+
+.top-sides {
+    display: flex;
+    justify-content: space-between;
+}
+
 button {
     color: crimson;
     padding: 15px 32px;
