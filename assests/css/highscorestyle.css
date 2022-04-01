@@ -1,21 +1,6 @@
-
 body {
     background-color: cadetblue;
     margin: 6px;
-}
-
-h1 {
-    font-size: larger;
-    font-weight: bolder;
-    padding: 2rem;
-}
-
-h3 {
-    padding: 2rem;
-}
-a {
-    text-decoration: none;
-    color: crimson;
 }
 
 button {
@@ -27,18 +12,26 @@ button {
     cursor: pointer;
 }
 
-img {
-    border-radius: 50px;
-}
-
-.center-page{
-    text-align: center;
+a {
+    text-decoration: none;
+    color: crimson;
 }
 
 .center {
     display: flex;
     justify-content: center;
-    text-align: center/left/right;
+    flex-direction: column;
+
+}
+
+.button-center{
+    text-align: center;
+}
+
+.text-highscore{
+    font-size: larger;
+    font-weight: bolder;
+    padding: 2rem;
 }
 
 .flexbox {
@@ -46,9 +39,5 @@ img {
     flex-wrap: nowrap;
     flex-direction: column;
     justify-content: center;
-}
-
-.title {
-    display: flex;
-    justify-content: center;
+    text-align: center;
 }
