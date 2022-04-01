@@ -1,0 +1,50 @@
+
+body {
+    background-color: cadetblue;
+    margin: 6px;
+}
+
+h1 {
+    font-size: larger;
+    font-weight: bolder;
+    padding: 2rem;
+}
+
+h3 {
+    padding: 2rem;
+}
+
+button {
+    color: crimson;
+    padding: 15px 32px;
+    text-decoration: none;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+img {
+    border-radius: 50px;
+}
+
+.center-page{
+    text-align: center;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    text-align: center/left/right;
+}
+
+.flexbox {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.title {
+    display: flex;
+    justify-content: center;
+}
