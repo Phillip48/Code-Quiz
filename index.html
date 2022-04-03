@@ -27,11 +27,22 @@
     </div>
     <!--FOR THE QUESTIONS-->
     <section id="questions" class="hide">
-
-
+        <h2 id="question-title"></h2>
+        <!---->
+        <!---->
+        <div id="choices" class="choices"></div>
     </section>
 
+    <section id="final-screen" class="hide">
+        <h2>Quiz Completed!</h2>
 
+        <p>Your final score is: <span id="final-score"></span></p>
+
+        <p>Enter your initals: <input type="text" id="initals" max="4">
+        <button id="submit">Submit score</button></p>
+    </section>
+
+    <aside id="feedback" class="feedback hide"></aside>
 </body>
 <script src="./assests/script.js"></script>
 </html>
