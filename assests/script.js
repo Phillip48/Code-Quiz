@@ -1,15 +1,18 @@
-// Var for button id
+
+
+//================Global variables===================//
+// VAR for button ID's
 var startGame = document.getElementById("start-game");
-var timer = document.getElementById("time");
-//
+var submitBtn = document.getElementById("submit");
 
-//
+//  VAR for ID's throughout the quiz. Helps traverse the DOM
+var questionsElement = document.getElementById("questions");
+var timerElement = document.getElementById("time");
+var choicesElement = document.getElementById("choices");
+var initialsElement = document.getElementById("initials");
+var feedBackElement = document.getElementById("feedback");
 
-//
-
-//
-
-//questions
+//Questions for Quiz
 var questions = [
     {
         title: "When was rock climbing added to the Olympics?",
@@ -38,3 +41,12 @@ var questions = [
 
     }
 ];
+
+//Variables to keep track of time'
+var questionsIndex = 0;
+// Indexed at 0
+var time = questions.length * 15;
+// Allows you to keep a timer and scorefor your quiz
+var timerId;
+
+//================Global variables===================//
