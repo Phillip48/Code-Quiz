@@ -50,3 +50,24 @@ var time = questions.length * 15;
 var timerId;
 
 //================Global variables===================//
+
+// start quiz function
+function startQuiz() {
+    // hide start screen when quiz start
+    var startQuizElement = document.getElementById("start-game");
+    // make questions appear
+    questionsElement.removeAttribute("class");
+
+    // start time
+
+    //show starting time on page
+
+    getQuestions();
+}
+
+function getQuestions() {
+    // create a variable to get the questions array 
+    var currentQuestions = questions[questionsIndex];
+
+    //update the code question title with current code
+}
