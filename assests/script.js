@@ -70,4 +70,69 @@ function getQuestions() {
     var currentQuestions = questions[questionsIndex];
 
     //update the code question title with current code
+
+    //clear out old question chocies
+
+    // we can loop over the choices using for each
+
+    //attach click event to listner
+
+    //display the choice on the page
 }
+
+// question button clicks
+function clickQuestions() {
+    // error handling for incorrect answer to question
+
+    // time deduction
+
+    // display new time once deduction is done
+
+    // flash the right or wrong feedback under the page question 
+
+    // Move to the next question
+
+    // check if all questions are dopne being asked
+}
+
+// end the quiz
+function endQuiz() {
+    // stop the timer
+    clearInterval(timerId);
+
+    // show final screen
+
+    // show final score
+
+    // hide questions
+}
+
+function clockCountDown() {
+    // update the time
+    time--;
+    timerElement.textContent = time;
+    if (time <=0) {
+        endQuiz();
+    }
+}
+
+function saveHighScores() {
+    // get value from your input box
+
+    // make sure user wrote intials
+
+    // local storage
+
+    // redirect to highscore page
+}
+// key event function
+function enterBtnEvent() {
+    // Give enter key abaility to save your highscore when key down
+}
+
+// user clicks button to save their initials
+submitBtn.onclick = saveHighScores;
+// user clicks to begin quiz
+startGame.onclick = startQuiz;
+//checks if user hit enter for initials
+initialsElement.onkeyup = enterBtnEvent;
