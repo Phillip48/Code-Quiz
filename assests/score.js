@@ -1,3 +1,6 @@
+//checks if user hit enter for initials//
+initialsElement.onkeyup = enterBtnEvent;
+
 
 function printScores() {
     // Getting scores from local storage or set to an empty array

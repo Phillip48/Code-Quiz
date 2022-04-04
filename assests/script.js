@@ -53,13 +53,21 @@ var timerId;
 
 // start quiz function
 function startQuiz() {
-    // hide start screen when quiz start
-    var startQuizElement = document.getElementById("start-game");
-    // make questions appear
-    questionsElement.removeAttribute("class");
+    // Function variables
+    var hideScreen = document.querySelector(".hide-screen")
+    var highScoreBtn = document.getElementById("highscore");
 
-    // start time
-    time= 70;
+    // Hides main screen when button is clicked
+    hideScreen.setAttribute("class", "hide");
+    highScoreBtn.setAttribute("class", "hide");
+
+    // make questions appear by taking out hide class
+    questionsElement.removeAttribute("class", "hide");
+
+    // start time, set interval 
+    
+    clockCountDown();
+    
     //show starting time on page
 
     getQuestions();
@@ -101,7 +109,7 @@ function endQuiz() {
     clearInterval(timerId);
 
     // show final screen
-
+    
     // show final score
 
     // hide questions
@@ -109,12 +117,14 @@ function endQuiz() {
 
 function clockCountDown() {
     // update the time
-    time--;
+    timer = setInterval(function () {
+        time--;
     timerElement.textContent = time;
     if (time <=0) {
         endQuiz();
     }
-}
+    })
+} 1000;
 
 function saveHighScores() {
     // get value from your input box
@@ -137,5 +147,3 @@ function enterBtnEvent() {
 submitBtn.onclick = saveHighScores;
 // user clicks to begin quiz
 startGame.onclick = startQuiz;
-//checks if user hit enter for initials
-initialsElement.onkeyup = enterBtnEvent;

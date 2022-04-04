@@ -23,11 +23,11 @@ aside {
     text-align: right;
     display: inline-block;
     padding: 2rem;
+    margin-right: 1rem;
 }
 
-.top-sides {
-    display: flex;
-    justify-content: space-between;
+img {
+    border-radius: 50px;
 }
 
 button {
@@ -39,8 +39,9 @@ button {
     cursor: pointer;
 }
 
-img {
-    border-radius: 50px;
+.top-sides {
+    display: flex;
+    justify-content: space-between;
 }
 
 .center-page{
