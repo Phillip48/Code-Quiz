@@ -69,3 +69,18 @@ button {
 .hide {
     display: none;
 }
+
+.choices {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 80%;
+}
+
+#question-title {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-size: xx-large;
+    font-weight: bolder;
+}

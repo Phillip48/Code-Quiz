@@ -74,23 +74,35 @@ function startQuiz() {
 
 function getQuestions() {
     // create a variable to get the questions array 
+    var titleElement = document.getElementById('question-title');
     var currentQuestions = questions[questionsIndex];
 
-    //update the code question title with current code
+    titleElement.textContent = currentQuestions.title
 
-    //clear out old question chocies
+    currentQuestions.choices.forEach(function(choices,i) {
+        var choicesBtn = document.createElement('button');
+        choicesBtn.setAttribute("class", "choices");
+        choicesBtn.setAttribute("value", choices);
+        choicesBtn.textContent = i+1 + ". " + choices;
+        choicesElement.appendChild(choicesBtn);
 
-    // we can loop over the choices using for each
+        choicesBtn.onclick = clickQuestions();
+    });
 
     //attach click event to listner
 
     //display the choice on the page
+    
 }
 
 // question button clicks
 function clickQuestions() {
-    // error handling for incorrect answer to question
+    var questionAnswers = questions.choices
 
+    // error handling for incorrect answer to question
+    if (questions.choices != questionAnswers) {
+        time -1500;
+    }
     // time deduction
 
     // display new time once deduction is done
@@ -99,19 +111,26 @@ function clickQuestions() {
 
     // Move to the next question
 
-    // check if all questions are dopne being asked
+    // check if all questions are done being asked
 }
 
 // end the quiz
 function endQuiz() {
+
+    var finalScreen = document.getElementById('final-screen');
+    var finalScore = document.getElementById('final-score');
+
+
     // stop the timer
     clearInterval(timerId);
 
     // show final screen
+    finalScreen.removeAttribute("class", "hide");
     
     // show final score
 
     // hide questions
+    questionsElement.setAttribute("class", "hide");
 }
 
 function clockCountDown() {
@@ -119,7 +138,7 @@ function clockCountDown() {
     timer = setInterval(function () {
         time--;
     timerElement.textContent = time;
-    if (time <=0) {
+    if (time === 0) {
         endQuiz();
     }
     },1000);
