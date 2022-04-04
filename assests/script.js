@@ -59,7 +59,7 @@ function startQuiz() {
     questionsElement.removeAttribute("class");
 
     // start time
-
+    time= 70;
     //show starting time on page
 
     getQuestions();
@@ -118,12 +118,15 @@ function clockCountDown() {
 
 function saveHighScores() {
     // get value from your input box
-
+    var value = initialsElement.value 
     // make sure user wrote intials
-
-    // local storage
-
-    // redirect to highscore page
+    if (value === ""){
+        return
+    }
+    // local storage.... !Not sure what variable to use!
+    localStorage.setItem("Scores", )
+    // redirect to highscore page// might have to chnage link
+    location.href="file:///C:/Users/phill/OneDrive/Documents/UCF/homework/Code-Quiz/highscore.html"
 }
 // key event function
 function enterBtnEvent() {

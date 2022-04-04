@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,38 +12,42 @@
 
 <body>
     <div class="top-sides">
-        <button id="highscore"><a href="highscore.html">Highscore</a></button> 
+        <button id="highscore"><a href="highscore.html">Highscore</a></button>
         <aside class="timer">Time: <span id="time">0</span></aside>
     </div>
-
-    <div class="center-page">
-        <img class="img-question" src="./assests/img/questions.jpg" alt="question marks">
-        <section class="flexbox">  
-            <h1 class="title">Random Question Quiz Game</h1>
-            <h3 class="title">Do you think you're ready to take the Random Question Quiz Game? I doubt you are. Prove me wrong and get a perfect score. Anything less and I'll be disappointed. HA! HA!</h3>
-        </section>
-        <div class="center">
-         <button id="start-game"> Start Game</button>
+    <section class="wrapper">
+        <div class="center-page">
+            <img class="img-question" src="./assests/img/questions.jpg" alt="question marks">
+            <section class="flexbox">
+                <h1 class="title">Random Question Quiz Game</h1>
+                <h3 class="title">Do you think you're ready to take the Random Question Quiz Game? I doubt you are.
+                    Prove me wrong and get a perfect score. Anything less and I'll be disappointed. HA! HA!</h3>
+            </section>
+            <div class="center">
+                <button id="start-game"> Start Game</button>
+            </div>
         </div>
-    </div>
-    <!--FOR THE QUESTIONS-->
-    <section id="questions" class="hide">
-        <h2 id="question-title"></h2>
-        <!---->
-        <!---->
-        <div id="choices" class="choices"></div>
+        <!--FOR THE QUESTIONS-->
+        <section id="questions" class="hide">
+            <h2 id="question-title"></h2>
+            <!---->
+            <!---->
+            <div id="choices" class="choices"></div>
+        </section>
+
+        <section id="final-screen" class="hide">
+            <h2>Quiz Completed!</h2>
+
+            <p>Your final score is: <span id="final-score"></span></p>
+
+            <p>Enter your initals: <input type="text" id="initals" max="4">
+                <button id="submit">Submit score</button>
+            </p>
+        </section>
+
+        <aside id="feedback" class="feedback hide"></aside>
     </section>
-
-    <section id="final-screen" class="hide">
-        <h2>Quiz Completed!</h2>
-
-        <p>Your final score is: <span id="final-score"></span></p>
-
-        <p>Enter your initals: <input type="text" id="initals" max="4">
-        <button id="submit">Submit score</button></p>
-    </section>
-
-    <aside id="feedback" class="feedback hide"></aside>
 </body>
 <script src="./assests/script.js"></script>
+
 </html>
