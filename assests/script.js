@@ -64,8 +64,7 @@ function startQuiz() {
     // make questions appear by taking out hide class
     questionsElement.removeAttribute("class", "hide");
 
-    // start time, set interval 
-    
+    // start time
     clockCountDown();
     
     //show starting time on page
@@ -123,8 +122,8 @@ function clockCountDown() {
     if (time <=0) {
         endQuiz();
     }
-    })
-} 1000;
+    },1000);
+};
 
 function saveHighScores() {
     // get value from your input box
