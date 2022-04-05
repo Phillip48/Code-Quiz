@@ -46,7 +46,7 @@ var questions = [
 var questionsIndex = 0;
 // Indexed at 0
 var time = questions.length * 15;
-// Allows you to keep a timer and scorefor your quiz
+// Allows you to keep a timer and score for your quiz
 var timerId;
 
 //================Global variables===================//
@@ -94,10 +94,11 @@ function getQuestions() {
     
 }
 
-// question button clicks
+// question button clicks // Error code from this function
 function clickQuestions() {
    // var questionAnswers = questions.answers
     //var questionChoices = questions.choices
+    var questionsLength = questions.length
     
 
     // error handling for incorrect answer to question
@@ -114,7 +115,7 @@ function clickQuestions() {
     questionsIndex++;
 
     // check if all questions are done being asked
-    if (questionsIndex === questions.length){
+    if (questions === questionsLength){
         endQuiz();
     } else {
         getQuestions();
@@ -151,7 +152,7 @@ function clockCountDown() {
     timer = setInterval(function () {
         time--;
     timerElement.textContent = time;
-    if (time === 0) {
+    if (timer === 0) {
         endQuiz();
     }
     },1000);
