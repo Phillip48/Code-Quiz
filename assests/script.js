@@ -154,7 +154,7 @@ function saveHighScores() {
     }
     // local storage.... !Not sure what variable to use!
     localStorage.setItem("Scores", )
-    // redirect to highscore page// might have to chnage link
+    // redirect to highscore page// might have to change link
     location.href="file:///C:/Users/phill/OneDrive/Documents/UCF/homework/Code-Quiz/highscore.html"
 }
 // key event function
