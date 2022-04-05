@@ -97,11 +97,12 @@ function getQuestions() {
 
 // question button clicks
 function clickQuestions() {
-    var questionAnswers = questions.choices
+    var questionAnswers = questions.answers
+    
 
     // error handling for incorrect answer to question
-    if (questions.choices != questionAnswers) {
-        time -1500;
+    if (questionAnswers === true) {
+        console.log("wrong");
     }
     // time deduction
 
@@ -158,7 +159,8 @@ function saveHighScores() {
 }
 // key event function
 function enterBtnEvent() {
-    // Give enter key abaility to save your highscore when key down
+    // Give enter key ability to save your highscore when key down ???? check code
+   initialsElement.addEventListener("keyup", "enter") 
 }
 
 // user clicks button to save their initials
