@@ -88,7 +88,6 @@ function getQuestions() {
 
         choicesBtn.onclick = clickQuestions();
     });
-
     //attach click event to listner
 
     //display the choice on the page
@@ -97,11 +96,12 @@ function getQuestions() {
 
 // question button clicks
 function clickQuestions() {
-    var questionAnswers = questions.answers
+   // var questionAnswers = questions.answers
+    //var questionChoices = questions.choices
     
 
     // error handling for incorrect answer to question
-    if (questionAnswers === true) {
+    if (this.value !== questions[questionsIndex].answers) {
         console.log("wrong");
     }
     // time deduction
@@ -111,8 +111,15 @@ function clickQuestions() {
     // flash the right or wrong feedback under the page question 
 
     // Move to the next question
+    questionsIndex++;
 
     // check if all questions are done being asked
+    if (questionsIndex === questions.length){
+        endQuiz();
+    } else {
+        getQuestions();
+    }
+    
 }
 
 // end the quiz
@@ -125,10 +132,15 @@ function endQuiz() {
     // stop the timer
     clearInterval(timerId);
 
+    // Show highscore button in top corner
+    highScoreBtn.removeAttribute("class", "hide");
+
+
     // show final screen
     finalScreen.removeAttribute("class", "hide");
     
     // show final score
+    finalScore.removeAttribute("class", "hide");
 
     // hide questions
     questionsElement.setAttribute("class", "hide");
@@ -145,6 +157,7 @@ function clockCountDown() {
     },1000);
 };
 
+//fix some code in function // delete note when done
 function saveHighScores() {
     // get value from your input box
     var value = initialsElement.value 
