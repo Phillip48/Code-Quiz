@@ -124,13 +124,13 @@ function clickQuestions() {
 
 // end the quiz
 function endQuiz() {
-
+    var highScoreBtn = document.getElementById("highscore");
     var finalScreen = document.getElementById('final-screen');
     var finalScore = document.getElementById('final-score');
 
 
     // stop the timer
-    clearInterval(timerId);
+    clearInterval(timer);
 
     // Show highscore button in top corner
     highScoreBtn.removeAttribute("class", "hide");

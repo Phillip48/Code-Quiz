@@ -5,13 +5,14 @@ body {
 }
 
 h1 {
-    font-size: larger;
+    font-size: xx-large;
     font-weight: bolder;
     padding: 2rem;
 }
 
 h3 {
     padding: 2rem;
+    font-size: larger;
 }
 
 a {
