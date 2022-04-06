@@ -171,20 +171,26 @@ function clockCountDown() {
 //fix some code in function // delete note when done
 function saveHighScores() {
     // get value from your input box
-    var value = initialsElement.value
+    var userValue = initialsElement.value.trim();
+console.log(initialsElement);
     // make sure user wrote intials
-    if (value === "") {
-        return
+    if (userValue === "") {
+        window.alert('Please enter a value');
+    } else {
+        var topScore = JSON.parse(window.localStorage.getItem("topScore")) || highScore;
+        var newScore = {
+            initials: userValue, 
+            score: time
+        }
+        topScore.push(newScore);
+        window.localStorage.setItem("topScore", JSON.stringify(topScore));
+        window.location.href="highscore.html";
     }
-    // local storage.... !Not sure what variable to use!
-    localStorage.setItem("Scores", highScore)
-    // redirect to highscore page// might have to change link
-    location.href = "file:///C:/Users/phill/OneDrive/Documents/UCF/homework/Code-Quiz/highscore.html"
 }
 // key event function
 function enterBtnEvent() {
     // Give enter key ability to save your highscore when key down ???? check code
-    initialsElement.addEventListener("keyup", "enter")
+    
 }
 
 // user clicks button to save their initials
