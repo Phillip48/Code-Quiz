@@ -1,6 +1,6 @@
 # Code-Quiz
 
-Deployed site:
+Deployed site: https://phillip48.github.io/Code-Quiz/  
 
 ## Welcome to the random quiz game.
 
